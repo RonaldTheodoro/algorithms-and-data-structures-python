@@ -1,0 +1,49 @@
+def test_stack_list_push(stack_list):
+    assert stack_list.is_empty()
+    stack_list.push(7)
+    stack_list.push(8)
+    stack_list.push(9)
+    assert not stack_list.is_empty()
+    assert len(stack_list) == 3
+
+
+def test_stack_list_pop(stack_list):
+    stack_list.push(7)
+    stack_list.push(8)
+    stack_list.push(9)
+    assert stack_list.pop() == 9
+    assert stack_list.pop() == 8
+    assert stack_list.pop() == 7
+
+
+def test_stack_list_pop_empty(stack_list):
+    assert stack_list.pop() is None
+
+
+def test_stack_list_peek(stack_list):
+    stack_list.push(42)
+    assert stack_list.peek() == 42
+
+
+def test_stack_list_peek_empty(stack_list):
+    assert stack_list.peek() is None
+
+
+def test_stack_list_is_empty(stack_list):
+    assert stack_list.is_empty()
+    assert len(stack_list) == 0
+
+
+def test_stack_list_is_not_empty(stack_list):
+    stack_list.push(42)
+    assert not stack_list.is_empty()
+    assert len(stack_list) == 1
+
+
+def test_stack_list_clear(stack_list):
+    stack_list.push(42)
+    stack_list.push(4)
+    stack_list.push(2)
+    assert len(stack_list) == 3
+    stack_list.clear()
+    assert stack_list.is_empty()
