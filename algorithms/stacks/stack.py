@@ -30,3 +30,6 @@ class Stack:
 
     def __len__(self):
         return self._count
+
+    def __str__(self):
+        return f'Stack({[self._items[i] for i in range(self._count)]})'
