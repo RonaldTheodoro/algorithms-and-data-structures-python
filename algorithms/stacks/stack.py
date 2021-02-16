@@ -33,3 +33,6 @@ class Stack:
 
     def __str__(self):
         return f'Stack({[self._items[i] for i in range(self._count)]})'
+
+    def __bool__(self):
+        return not self.is_empty()

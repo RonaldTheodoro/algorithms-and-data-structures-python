@@ -29,3 +29,6 @@ class StackList:
 
     def __str__(self):
         return f'StackList({self._items})'
+
+    def __bool__(self):
+        return not self.is_empty()
