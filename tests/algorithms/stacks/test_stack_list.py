@@ -47,3 +47,14 @@ def test_stack_list_clear(stack_list):
     assert len(stack_list) == 3
     stack_list.clear()
     assert stack_list.is_empty()
+
+
+def test_stack_list_str(stack_list):
+    stack_list.push(1)
+    stack_list.push(2)
+    stack_list.push(3)
+    assert str(stack_list) == 'StackList([1, 2, 3])'
+
+
+def test_stack_list_empty_str(stack_list):
+    assert str(stack_list) == 'StackList([])'
