@@ -58,3 +58,12 @@ def test_stack_str(stack):
 
 def test_stack_empty_str(stack):
     assert str(stack) == 'Stack([])'
+
+
+def test_stack_true_value(stack):
+    stack.push(42)
+    assert bool(stack)
+
+
+def test_stack_false_value(stack):
+    assert not bool(stack)
