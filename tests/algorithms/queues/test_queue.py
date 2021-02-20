@@ -6,6 +6,7 @@ def test_queue_enqueue(queue):
     assert not queue.is_empty()
     assert len(queue) == 3
 
+
 def test_queue_dequeue(queue):
     queue.enqueue(7)
     queue.enqueue(8)
