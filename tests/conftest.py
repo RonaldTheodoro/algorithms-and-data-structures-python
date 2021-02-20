@@ -2,7 +2,7 @@ import pytest
 
 from algorithms.stacks.stack_list import StackList
 from algorithms.stacks.stack import Stack
-
+from algorithms.queues.queue import Queue
 
 @pytest.fixture
 def stack_list():
@@ -12,3 +12,8 @@ def stack_list():
 @pytest.fixture
 def stack():
     return Stack()
+
+
+@pytest.fixture
+def queue():
+    return Queue()
