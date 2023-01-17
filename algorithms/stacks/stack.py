@@ -1,5 +1,4 @@
 class Stack:
-
     def __init__(self):
         self._count = 0
         self._itens = {}
@@ -32,7 +31,7 @@ class Stack:
         return self._count
 
     def __str__(self):
-        return f'Stack({[self._itens[i] for i in range(self._count)]})'
+        return f"Stack({[self._itens[i] for i in range(self._count)]})"
 
     def __bool__(self):
         return not self.is_empty()

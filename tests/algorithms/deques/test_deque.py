@@ -89,11 +89,11 @@ def test_deque_str(deque):
     deque.add_back(2)
     deque.add_front(3)
     deque.add_back(4)
-    assert str(deque) == 'Deque([3, 1, 2, 4])'
+    assert str(deque) == "Deque([3, 1, 2, 4])"
 
 
 def test_deque_empty_str(deque):
-    assert str(deque) == 'Deque([])'
+    assert str(deque) == "Deque([])"
 
 
 def test_deque_true_value(deque):

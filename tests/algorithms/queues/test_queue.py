@@ -53,11 +53,11 @@ def test_queue_str(queue):
     queue.enqueue(1)
     queue.enqueue(2)
     queue.enqueue(3)
-    assert str(queue) == 'Queue([1, 2, 3])'
+    assert str(queue) == "Queue([1, 2, 3])"
 
 
 def test_queue_empty_str(queue):
-    assert str(queue) == 'Queue([])'
+    assert str(queue) == "Queue([])"
 
 
 def test_queue_true_value(queue):

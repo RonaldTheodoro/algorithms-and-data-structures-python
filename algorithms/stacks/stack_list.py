@@ -1,5 +1,4 @@
 class StackList:
-
     def __init__(self):
         self._itens = []
 
@@ -28,7 +27,7 @@ class StackList:
         return len(self._itens)
 
     def __str__(self):
-        return f'StackList({self._itens})'
+        return f"StackList({self._itens})"
 
     def __bool__(self):
         return not self.is_empty()

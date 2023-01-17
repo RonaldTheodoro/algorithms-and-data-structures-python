@@ -4,7 +4,7 @@ from algorithms.stacks.stack import Stack
 def decimal_to_binary(decimal_number):
     stack = Stack()
     number = int(decimal_number)
-    binary_string = ''
+    binary_string = ""
 
     while number > 0:
         stack.push(number % 2)

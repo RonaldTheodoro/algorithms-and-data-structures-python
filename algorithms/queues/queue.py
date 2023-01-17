@@ -1,5 +1,4 @@
 class Queue:
-
     def __init__(self):
         self._count = 0
         self._lowest_count = 0
@@ -36,7 +35,7 @@ class Queue:
         return self._count - self._lowest_count
 
     def __str__(self):
-        return f'Queue({[self._itens[i] for i in range(self._count)]})'
+        return f"Queue({[self._itens[i] for i in range(self._count)]})"
 
     def __bool__(self):
         return not self.is_empty()

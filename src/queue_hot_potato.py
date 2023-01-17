@@ -13,4 +13,4 @@ def hot_potato(elements, num):
             queue.enqueue(queue.dequeue())
         elimitated.append(queue.dequeue())
 
-    return { 'elimitated': elimitated, 'winner': queue.dequeue() }
+    return {"elimitated": elimitated, "winner": queue.dequeue()}

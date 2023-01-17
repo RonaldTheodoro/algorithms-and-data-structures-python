@@ -53,11 +53,11 @@ def test_stack_str(stack):
     stack.push(1)
     stack.push(2)
     stack.push(3)
-    assert str(stack) == 'Stack([1, 2, 3])'
+    assert str(stack) == "Stack([1, 2, 3])"
 
 
 def test_stack_empty_str(stack):
-    assert str(stack) == 'Stack([])'
+    assert str(stack) == "Stack([])"
 
 
 def test_stack_true_value(stack):

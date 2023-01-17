@@ -53,11 +53,11 @@ def test_stack_list_str(stack_list):
     stack_list.push(1)
     stack_list.push(2)
     stack_list.push(3)
-    assert str(stack_list) == 'StackList([1, 2, 3])'
+    assert str(stack_list) == "StackList([1, 2, 3])"
 
 
 def test_stack_list_empty_str(stack_list):
-    assert str(stack_list) == 'StackList([])'
+    assert str(stack_list) == "StackList([])"
 
 
 def test_stack_list_true_value(stack_list):
