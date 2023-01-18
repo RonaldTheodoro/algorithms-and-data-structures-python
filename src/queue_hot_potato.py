@@ -3,7 +3,7 @@ from algorithms.queues.queue import Queue
 
 def hot_potato(elements, num):
     queue = Queue()
-    elimitated = []
+    eliminated = []
 
     for element in elements:
         queue.enqueue(element)
@@ -11,6 +11,6 @@ def hot_potato(elements, num):
     while len(queue) > 1:
         for i in range(num):
             queue.enqueue(queue.dequeue())
-        elimitated.append(queue.dequeue())
+        eliminated.append(queue.dequeue())
 
-    return {"elimitated": elimitated, "winner": queue.dequeue()}
+    return {"eliminated": eliminated, "winner": queue.dequeue()}
