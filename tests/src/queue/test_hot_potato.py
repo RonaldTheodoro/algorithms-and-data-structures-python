@@ -1,4 +1,4 @@
-from src.queue_hot_potato import hot_potato
+from src.queue.hot_potato import hot_potato
 
 
 def test_hot_potato():

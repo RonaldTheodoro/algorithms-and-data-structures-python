@@ -1,4 +1,4 @@
-from src.stack_decimal_to_binary import decimal_to_binary
+from src.stack.decimal_to_binary import decimal_to_binary
 
 
 def test_decimal_to_binary():
