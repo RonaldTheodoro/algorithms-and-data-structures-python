@@ -58,8 +58,11 @@ def test_deque_peek_back(deque):
     assert deque.peek_back() == 42
 
 
-def test_deque_peek_empty(deque):
+def test_deque_peek_front_empty(deque):
     assert deque.peek_front() is None
+
+
+def test_deque_peek_back_empty(deque):
     assert deque.peek_back() is None
 
 
