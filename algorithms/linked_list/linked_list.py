@@ -50,10 +50,10 @@ class LinkedList:
         return None
 
     def remove(self, element):
-        index = self.index_of(element)
+        index = self.index(element)
         return self.remove_at(index)
 
-    def index_of(self, element):
+    def index(self, element):
         current = self._head
         i = 0
         # TODO: Transform while in for
@@ -65,6 +65,7 @@ class LinkedList:
         return -1
 
     def remove_at(self, index):
+        # TODO: rename to pop and remove last item when index is None
         if self._index_is_inside_range(index):
             current = self._head
             if index == 0:

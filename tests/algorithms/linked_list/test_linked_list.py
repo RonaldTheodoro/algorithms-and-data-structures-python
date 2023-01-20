@@ -130,14 +130,14 @@ def test_try_remove_non_existing_element_should_return_none(
     assert len(linked_list_with_elements) == 3
 
 
-def test_index_of(linked_list_with_elements):
-    assert linked_list_with_elements.index_of(1) == 0
-    assert linked_list_with_elements.index_of(2) == 1
-    assert linked_list_with_elements.index_of(3) == 2
+def test_index(linked_list_with_elements):
+    assert linked_list_with_elements.index(1) == 0
+    assert linked_list_with_elements.index(2) == 1
+    assert linked_list_with_elements.index(3) == 2
 
 
-def test_index_of_with_non_existing_value(linked_list_with_elements):
-    assert linked_list_with_elements.index_of(99) == -1
+def test_index_with_non_existing_value(linked_list_with_elements):
+    assert linked_list_with_elements.index(99) == -1
 
 
 def test_remove_at_first_element(linked_list_with_elements):
@@ -208,3 +208,16 @@ def test_head(linked_list_with_elements):
 
 def test_head_empty(linked_list):
     assert linked_list.head is None
+
+
+def test_convert_linked_list_to_list(linked_list_with_elements):
+    assert list(linked_list_with_elements) == [1, 2, 3]
+
+
+def test_convert_empty_linked_list_to_list(linked_list):
+    assert list(linked_list) == []
+
+
+def test_iterate_linked_list(linked_list_with_elements):
+    for num, element in zip([1, 2, 3], linked_list_with_elements):
+        assert num == element
