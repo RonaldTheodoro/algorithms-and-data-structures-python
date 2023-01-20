@@ -7,7 +7,6 @@ class LinkedList:
         if equals is None:
             equals = default_equals
 
-        # TODO: add _ in the instance properties
         self._count = 0
         self._head = None
         self._equals = equals
@@ -24,7 +23,7 @@ class LinkedList:
         self._count += 1
 
     def insert(self, element, index):
-        if index >= 0 and index <= self._count: # TODO: move it to a private method
+        if self._index_is_inside_range(index):
             node = Node(element)
             if index == 0:
                 current = self._head
@@ -41,7 +40,7 @@ class LinkedList:
 
     def get_element_at(self, index):
         # TODO: make get_element_at return the element not a node instance
-        if index >= 0 and index <= self._count: # TODO: move it to a private method
+        if self._index_is_inside_range(index):
             node = self._head
             i = 0
             while i < index and node is not None:
@@ -66,7 +65,7 @@ class LinkedList:
         return -1
 
     def remove_at(self, index):
-        if index >= 0 and index < self._count: # TODO: move it to a private method
+        if self._index_is_inside_range(index):
             current = self._head
             if index == 0:
                 self._head = current.next
@@ -84,6 +83,15 @@ class LinkedList:
     @property
     def head(self):
         return self._head
+
+    def _index_is_inside_range(self, index):
+        return 0 <= index <= self._count
+
+    def __getitem__(self, index):
+        element = self.get_element_at(index)
+        if element is None:
+            raise IndexError
+        return element.element
 
     def __len__(self):
         return self._count
