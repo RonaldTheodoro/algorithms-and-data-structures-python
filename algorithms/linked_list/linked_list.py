@@ -92,8 +92,7 @@ class LinkedList:
         return self._count
 
     def __str__(self):
-        if self._head is None:
-            return ""
+        return "" if self._head is None else ",".join(str(e) for e in self)
 
         obj_string = f"{self._head.element}"
         current = self._head.next
