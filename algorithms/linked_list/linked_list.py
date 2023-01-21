@@ -1,11 +1,10 @@
-from algorithms.utils import default_equals
 from algorithms.linked_list.models.linked_list_models import Node
 
 
 class LinkedList:
     def __init__(self, equals=None):
         if equals is None:
-            equals = default_equals
+            equals = lambda a, b: a == b
 
         self._count = 0
         self._head = None
