@@ -4,12 +4,14 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-pytest = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-cov = "*"
 
 [requires]
 python_version = "3.9"
 
 [scripts]
 test = "pytest"
+test_report = "pytest -c pytest_cov.ini"
