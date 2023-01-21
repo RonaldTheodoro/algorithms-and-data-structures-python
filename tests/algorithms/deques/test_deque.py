@@ -106,3 +106,15 @@ def test_deque_true_value(deque):
 
 def test_deque_false_value(deque):
     assert not bool(deque)
+
+
+def test_deque_add_front_after_remove_front(deque):
+    deque.add_front(1)
+    deque.add_front(2)
+    deque.add_front(3)
+
+    assert deque.remove_front() == 3
+
+    deque.add_front(99)
+
+    assert len(deque) == 3
