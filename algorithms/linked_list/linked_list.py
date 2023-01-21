@@ -94,14 +94,11 @@ class LinkedList:
     def __str__(self):
         return "" if self._head is None else ",".join(str(e) for e in self)
 
-        obj_string = f"{self._head.element}"
-        current = self._head.next
-        i = 1
-        while i < len(self) and current is not None:
-            obj_string = f"{obj_string},{current.element}"
-            current = current.next
-            i += 1
-        return obj_string
+    def __iter__(self):
+        node = self.head
+        while node is not None:
+            yield node.element
+            node = node.next
 
     def __bool__(self):
         return len(self) > 0
