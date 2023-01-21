@@ -194,11 +194,11 @@ def test_str_when_empty(linked_list):
     assert str(linked_list) == ""
 
 
-def test_str(linked_list_with_elements):
+def test_bool(linked_list_with_elements):
     assert bool(linked_list_with_elements)
 
 
-def test_str_when_empty(linked_list):
+def test_bool_when_empty(linked_list):
     assert not bool(linked_list)
 
 
