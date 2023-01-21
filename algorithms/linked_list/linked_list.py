@@ -53,14 +53,9 @@ class LinkedList:
         return self.remove_at(index)
 
     def index(self, element):
-        current = self._head
-        i = 0
-        # TODO: Transform while in for
-        while i < self._count and current is not None:
-            if self._equals(element, current.element):
-                return i
-            current = current.next
-            i += 1
+        for index, current in enumerate(self):
+            if self._equals(element, current):
+                return index
         return -1
 
     def remove_at(self, index):
@@ -97,17 +92,13 @@ class LinkedList:
         return self._count
 
     def __str__(self):
-        if self._head is None:
-            return ""
+        return "" if self._head is None else ",".join(str(e) for e in self)
 
-        obj_string = f"{self._head.element}"
-        current = self._head.next
-        i = 1
-        while i < len(self) and current is not None:
-            obj_string = f"{obj_string},{current.element}"
-            current = current.next
-            i += 1
-        return obj_string
+    def __iter__(self):
+        node = self.head
+        while node is not None:
+            yield node.element
+            node = node.next
 
     def __bool__(self):
         return len(self) > 0
