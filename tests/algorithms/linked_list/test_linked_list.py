@@ -218,5 +218,5 @@ def test_convert_empty_linked_list_to_list(linked_list):
 
 
 def test_iterate_linked_list(linked_list_with_elements):
-    for num, element in zip([1, 2, 3], linked_list_with_elements):
+    for num, element in zip([1, 2, 3], linked_list_with_elements, strict=True):
         assert num == element

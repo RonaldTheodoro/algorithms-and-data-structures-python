@@ -1,10 +1,10 @@
 import pytest
 
-from algorithms.stacks.stack_list import StackList
-from algorithms.stacks.stack import Stack
-from algorithms.queues.queue import Queue
 from algorithms.deques.deque import Deque
 from algorithms.linked_list.linked_list import LinkedList
+from algorithms.queues.queue import Queue
+from algorithms.stacks.stack import Stack
+from algorithms.stacks.stack_list import StackList
 
 
 @pytest.fixture

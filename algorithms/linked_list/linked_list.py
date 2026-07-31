@@ -4,7 +4,9 @@ from algorithms.linked_list.models.linked_list_models import Node
 class LinkedList:
     def __init__(self, equals=None):
         if equals is None:
-            equals = lambda a, b: a == b
+
+            def equals(a, b):
+                return a == b
 
         self._count = 0
         self._head = None
